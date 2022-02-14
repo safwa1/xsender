@@ -1,5 +1,5 @@
 ﻿# XEmail Sender Engine
-`version: "1.0.0 BETA (2022-02-13)"`
+`version: "1.01.0 BETA (2022-02-13)"` - `hot fix`
 
 
 
@@ -111,11 +111,11 @@ $ xsender --s | --send | send [options]
     -> template mode:
       $ xsender --s | --send | send -t <template>
     -> direct mode:
-      $ xsender --s | --send | send -r="<receiver-email>" -rn="<receiver-name>" -sn="<sender-name>" -s="<subject>" -m="<message>" -a="<attachment-path>" -c=<true|false>
+      $ xsender --s | --send | send -to="<receiver-email>" -rn="<receiver-name>" -sn="<sender-name>" -s="<subject>" -m="<message>" -a="<attachment-path>" -c=<true|false>
 
     options:
       -t        send template example: -t <template-path> | optional
-      -r        receiver email address example: -r=<email-address> | required
+      -to       receiver email address example: -to=<email-address> | required
       -rn       receiver name example: -n=<name> | required
       -sn       sender name example: -n=<name> | required
       -s        subject example: -s="<subject>" | required
@@ -125,10 +125,10 @@ $ xsender --s | --send | send [options]
 
     example:
       $ xsender send -t template\demo.json
-      $ xsender send  -r="john@mail.com" -rn="someone" -sn="someone" -s="demo subject" -m="demo message text" -a="c:\demo.pdf" -c=true
-
+      $ xsender send  -to="john@mail.com" -rn="someone" -sn="someone" -s="demo subject" -m="demo message text" -a="c:\demo.pdf" -c=true
 ```
 ---
+
 * `generate-template`
 ```textmate
 $ xsender -g | --generate | generate-template [options] <template-name>
@@ -167,4 +167,3 @@ $ xsender -d | --delete | delete-templates
     example:
       $ xsender -d
 ```
-
